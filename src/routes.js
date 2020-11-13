@@ -5,6 +5,7 @@ const ProdutoController = require('./controllers/ProdutoController');
 const VitrineController = require('./controllers/VitrineController');
 const UsuarioController = require('./controllers/UsuarioController');
 const CarrinhoController = require('./controllers/CarrinhoController');
+const PedidoController = require('./controllers/PedidoController');
 
 const FornecedorController = require('./controllers/FornecedorController');
 const CfopController = require('./controllers/CfopController');
@@ -46,6 +47,10 @@ routes.get('/deposito', DepositoController.index);
 routes.post('/carrinho', CarrinhoController.create);
 routes.get('/carrinho', CarrinhoController.index);
 routes.delete('/carrinho/delete/:idCarrinhoFK/:idProdutoFK', CarrinhoController.delete);
+
+routes.post('/pedido', PedidoController.create);
+routes.get('/pedido', PedidoController.index);
+//routes.delete('/pedido/delete/:idpedidoFK/:idProdutoFK', PedidoController.delete);
 
 routes.post('/usuario', UsuarioController.create);
 routes.get('/usuario', UsuarioController.index);
